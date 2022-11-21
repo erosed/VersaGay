@@ -17,7 +17,7 @@
             {% for Gasto in lista_gastos %}
                 <tr>
                     <td>{{ Gasto.nombre }}</td>
-                    <td><a href = "{{ Gasto.link }} Gasto.pk" target="_blank">{{ Gasto.link }}</a></td>
+                    <td><a href = "{{ Gasto.link }}" target="_blank">{{ Gasto.link }}</a></td>
                     <td>
                         <form method="POST" action="{% url 'borrarlink' Gasto.pk %}">
                             {% csrf_token %}
