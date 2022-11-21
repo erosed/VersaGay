@@ -27,7 +27,7 @@ class UserUpdateForm(forms.ModelForm):
 class NuevoGasto(forms.ModelForm):
 	class Meta:
 		model = Gasto
-		exclude = ["fecha"]
+		exclude = ["xd"]
 
 		
 class lista(forms.ModelForm):

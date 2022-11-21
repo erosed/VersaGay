@@ -11,6 +11,7 @@
             <tr>
                 <th id="nombre">Nombre</th>
                 <th id="link">Link</th>
+                <th id="link">Tiempo restante*</th>
             </tr>
         </thead>
         <tbody>
@@ -18,6 +19,7 @@
                 <tr>
                     <td>{{ Gasto.nombre }}</td>
                     <td><a href = "{{ Gasto.link }}" target="_blank">{{ Gasto.link }}</a></td>
+                    <td>{{ Gasto.fecha }}</td>
                     <td>
                         <form method="POST" action="{% url 'borrarlink' Gasto.pk %}">
                             {% csrf_token %}

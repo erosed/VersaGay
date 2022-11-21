@@ -21,6 +21,7 @@ class Gasto(models.Model):
     nombre = models.CharField(max_length=100)
     link = models.CharField(max_length=500)
     author = models.ForeignKey(get_user_model(), default=1, on_delete=models.SET_DEFAULT)
+    fecha = models.DateTimeField(auto_now_add = False, auto_now = False, blank = True, null = True)
     
     def __str__(self):
         return self.nombre
