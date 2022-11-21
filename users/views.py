@@ -98,6 +98,7 @@ def subirgasto(request, username):
         form = NuevoGasto(request.POST)
         if form.is_valid():
             instance = form.save(commit=False)
+            instance.author = request.user
             instance.save()
             return redirect("vergastos", user.username)
     else:
